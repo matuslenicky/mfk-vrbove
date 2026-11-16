@@ -33,8 +33,10 @@ if (!fs.existsSync(path.join(PAGES, '.git'))) {
 }
 
 // gh-pages sa mohla medzitým zmeniť (automatická aktualizácia výsledkov): začať od jej stavu na GitHube, inak push zlyhá
-run('git', ['fetch', '-q', ...(process.env.CI ? ['--depth', '1'] : []), 'origin', 'gh-pages'], { cwd: PAGES });
-run('git', ['reset', '-q', '--hard', 'FETCH_HEAD'], { cwd: PAGES });
+if (out('git', ['ls-remote', '--heads', 'origin', 'gh-pages'])) { // pri prvom nasadení vetva na GitHube ešte nie je
+  run('git', ['fetch', '-q', ...(process.env.CI ? ['--depth', '1'] : []), 'origin', 'gh-pages'], { cwd: PAGES });
+  run('git', ['reset', '-q', '--hard', 'FETCH_HEAD'], { cwd: PAGES });
+}
 
 // 3. obsah = presne dist/
 for (const f of fs.readdirSync(PAGES)) if (f !== '.git') fs.rmSync(path.join(PAGES, f), { recursive: true, force: true });
