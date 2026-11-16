@@ -29,6 +29,8 @@ const MONTHS_G = ['januára', 'februára', 'marca', 'apríla', 'mája', 'júna',
 const dObj = (iso) => new Date(iso + 'T12:00:00Z');
 const dShort = (iso) => { const d = dObj(iso); return `${d.getUTCDate()}. ${d.getUTCMonth() + 1}.`; };
 const dDay = (iso) => DAYS_S[dObj(iso).getUTCDay()];
+const DAYS_ACC = ['v nedeľu', 'v pondelok', 'v utorok', 'v stredu', 'vo štvrtok', 'v piatok', 'v sobotu'];
+const dWhen = (iso) => { const d = dObj(iso); return `${DAYS_ACC[d.getUTCDay()]} ${d.getUTCDate()}. ${MONTHS_G[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
 const dLong = (iso) => { const d = dObj(iso); return `${DAYS[d.getUTCDay()]} ${d.getUTCDate()}. ${MONTHS_G[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
 const dFull = (iso) => { const d = dObj(iso); return `${d.getUTCDate()}. ${d.getUTCMonth() + 1}. ${d.getUTCFullYear()}`; };
 const monthKey = (iso) => iso.slice(0, 7);
@@ -64,6 +66,8 @@ const matches = sn.matches.map((m) => {
   const t = bySlug[m.team];
   const past = m.played || m.date < TODAY;
   let gf = null, ga = null, res = null;
+  // prípravky (U11 a mladší) výsledok nezapisujú, Sportnet pri nich dáva 0:0 bez gólov
+  if (m.score === '0:0' && !(m.goals || []).length && /^U(\d|1[01])\b/.test(t.short)) m = { ...m, score: null };
   if (m.score) { const [h, a] = m.score.split(':').map(Number); [gf, ga] = m.home ? [h, a] : [a, h]; res = gf > ga ? 'w' : gf < ga ? 'l' : 'd'; }
   const slug = `${m.date}-${t.code}-${norm(m.opponent)}`;
   return { ...m, past, gf, ga, res, slug, url: `zapasy/${slug}/`, comp: compName(m.competition), roundName: ROUND(m.round), teamObj: t, cup: /cup|pohár/i.test(m.competition) };
@@ -315,7 +319,7 @@ add('', {
     </div>
   </div>
 </section>
-${winterNext && (dObj(winterNext.date) - dObj(TODAY)) / 864e5 > 14 ? `<section class="pause"><div class="wrap pause-in"><p><b>Zimná prestávka.</b> Jarná časť sa pre naše tímy začína ${dLong(winterNext.date)}, keď <span class="nw">${esc(winterNext.teamObj.full)}</span> hrá ${winterNext.home ? 'doma proti' : 'vonku na ihrisku'} ${esc(winterNext.opponent)}.</p></div></section>` : ''}
+${winterNext && (dObj(winterNext.date) - dObj(TODAY)) / 864e5 > 14 ? `<section class="pause"><div class="wrap pause-in"><p><b>Zimná prestávka.</b> Jarná časť sa pre naše tímy začína ${dWhen(winterNext.date)}, keď <span class="nw">${esc(winterNext.teamObj.full)}</span> hrá ${winterNext.home ? 'doma proti' : 'vonku na ihrisku'} ${esc(winterNext.opponent)}.</p></div></section>` : ''}
 <section class="sec" aria-labelledby="prog-h"><div class="wrap">
   ${secHead('Program a výsledky', 'prog-h', more(`${R}zapasy/`, 'Všetky zápasy'))}
   <div class="cols2">
