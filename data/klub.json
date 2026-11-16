@@ -1,0 +1,63 @@
+{
+  "_zdroj": "Ručne zapísané len zo zverejnených zdrojov (uvedené pri každej časti). Nič nedopĺňať odhadom – chýbajúce údaje dodá klub.",
+  "nazov": "MFK Vrbové",
+  "pravnyNazov": "Mestský futbalový klub Vrbové",
+  "skratka": "MFK",
+  "mesto": "Vrbové",
+  "zalozenie": 1922,
+  "adresa": ["Športová", "922 03 Vrbové"],
+  "ico": "37845195",
+  "ucet": "SK34 0200 0000 0017 3042 3851",
+  "kontakt": {
+    "_zdroj": "Sportnet – kontakt klubu (sportnet.sme.sk/futbalnet/k/mfk-vrbove/)",
+    "osoba": "Andrej Kolník",
+    "telefon": "+421 917 222 708",
+    "email": "andykolnik@gmail.com"
+  },
+  "facebook": "https://www.facebook.com/MFK-Vrbov%C3%A9-1413905672160657/",
+  "_facebook": "odkaz z webu mesta vrbove.sk",
+  "sportnetUrl": "https://sportnet.sme.sk/futbalnet/k/mfk-vrbove/",
+  "dokumenty": [
+    { "nazov": "Stanovy MFK Vrbové", "url": "https://www.vrbove.sk/wp-content/uploads/2017/08/stanovy_mfk-1.pdf", "typ": "PDF", "zdroj": "web mesta Vrbové" }
+  ],
+  "stadion": {
+    "_zdroj": "Sportnet – údaje ihriska zo zápisu o stretnutí",
+    "nazov": "Mestský futbalový štadión Jozefa Adamca",
+    "sportnet": "Mestský futbalový štadión Jozefa Adamca vo  Vrbovom",
+    "adresa": ["Športová", "922 03 Vrbové"],
+    "kapacita": 1500,
+    "vip": 20,
+    "rozmery": "105 × 67 m",
+    "geo": [48.6266532, 17.7234003]
+  },
+  "historia": [
+    { "rok": "1922", "text": "Založenie futbalového klubu vo Vrbovom.", "zdroj": "Wikipédia: MFK Vrbové" },
+    { "rok": "", "text": "Klub hral pod názvom TJ Vrbové (Telovýchovná jednota Vrbové), dnes nesie meno Mestský futbalový klub Vrbové.", "zdroj": "Wikipédia: MFK Vrbové" },
+    { "rok": "2022", "text": "Storočnica: 9. a 10. júla oslavy 100 rokov futbalu vo Vrbovom. Starí páni hrali s MŠK Spišské Podhradie, Vrbovčania s FC Spartak Trnava, muži MFK so Spartakom Myjava a v nedeľu patril štadión mládeži. Štefan Gregorička k výročiu pripravil knihu o histórii vrbovského futbalu.", "zdroj": "Piešťanský týždeň, 8. 7. 2022; pnky.sk" },
+    { "rok": "2022", "text": "Štadión dostal meno Jozefa Adamca. Stuhu prestrihol jeho brat Emil Adamec s manželkou.", "zdroj": "pnky.sk; Piešťanský týždeň, 8. 7. 2022" }
+  ],
+  "adamec": {
+    "_zdroj": "Wikipédia: Jozef Adamec (sk, en)",
+    "meno": "Jozef Adamec",
+    "prezyvka": "Hatrlo",
+    "narodenie": "26. februára 1942 vo Vrbovom",
+    "umrtie": "24. decembra 2018 v Trnave",
+    "text": [
+      "Rodák z Vrbového, legenda Spartaka Trnava. So Spartakom získal päť majstrovských titulov, ďalšie dva počas vojenčiny v Dukle Praha. V československej lige odohral 383 zápasov a strelil 170 gólov.",
+      "Za Československo nastúpil v 44 zápasoch a dal 14 gólov, hral na majstrovstvách sveta 1962, kde tím získal striebro, aj v roku 1970. Neskôr bol trénerom, v rokoch 1999 – 2001 viedol reprezentáciu Slovenska."
+    ],
+    "zapas": { "datum": "23. 6. 1968", "miesto": "Bratislava", "domaci": "ČSSR", "hostia": "Brazília", "skore": "3:2", "pozn": "Všetky tri góly Československa strelil Jozef Adamec." }
+  },
+  "sutaze": {
+    "_pozn": "čitateľné názvy súťaží namiesto názvov so sponzormi zo Sportnetu (kľúč = názov súťaže na Sportnete)",
+    "V. liga Severozápad Macron | yoursport ZsFZ": "V. liga Severozápad",
+    "VIII. liga-MAXIMA FASÁDY-ObFZ TT": "VIII. liga ObFZ Trnava",
+    "IV. liga-Žiaci-U15-ObFZ TT": "IV. liga starších žiakov ObFZ Trnava",
+    "IV. liga-MŽ-U13-sk.B-ObFZ TT": "IV. liga mladších žiakov ObFZ Trnava",
+    "Prípravka-U11-sk.B-ObFZ TT": "Prípravka U11 ObFZ Trnava",
+    "III. liga U11 - ObFZ TN": "III. liga U11 ObFZ Trenčín",
+    "Prípravka-U9-ObFZ TT": "Prípravka U9 ObFZ Trnava",
+    "Slovnaft Cup": "Slovnaft Cup",
+    "BESTRENT CUP  ObFZ Trnava": "Pohár ObFZ Trnava"
+  }
+}
