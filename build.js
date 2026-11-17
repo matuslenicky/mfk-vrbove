@@ -241,16 +241,16 @@ function board(m, R, { big = false, label = '' } = {}) {
 
 // riadok zápasu v zozname
 function matchRow(m, R, { showTeam = true } = {}) {
+  // malá dedinská tabuľa: každá číslica skóre (alebo času výkopu) na vlastnej plechovej tabuľke
+  const plates = (txt, cls) => [...String(txt)].map((c) => (/\d/.test(c) ? `<span class="pl8 ${cls}">${c}</span>` : `<span class="pl8-c">${esc(c)}</span>`)).join('');
   const right = m.score
-    ? `<span class="mr-score res-bg--${m.res}" title="${RES[m.res]}"><span class="sr">${RES[m.res]} </span>${esc(m.score)}</span>`
-    : m.past ? '<span class="mr-score mr-score--none">bez výsl.</span>' : `<span class="mr-time">${esc(m.time)}</span>`;
+    ? `<span class="pl8s" title="${RES[m.res]}"><span class="sr">${RES[m.res]}, výsledok ${esc(m.score)}</span><span aria-hidden="true">${plates(m.score, '')}</span></span>`
+    : m.past ? '<span class="pl8s pl8s--none">bez výsl.</span>' : `<span class="pl8s"><span class="sr">výkop ${esc(m.time || '')}</span><span aria-hidden="true">${plates(m.time || '--:--', 'pl8--y')}</span></span>`;
   const href = m.detail || !m.past ? ` href="${R}${m.url}"` : '';
   const tag = href ? 'a' : 'div';
-  return `<li class="mrow" data-team="${m.team}" data-where="${m.home ? 'doma' : 'vonku'}"><${tag} class="mrow-in"${href}>
-  <span class="mr-date"><span class="mr-day">${dDay(m.date)}</span><time datetime="${m.date}">${dShort(m.date)}</time></span>
-  ${logo(m.oppSpace, m.opponent, R, 32)}
-  <span class="mr-main"><span class="mr-opp">${esc(m.opponent)}</span>
-  <span class="mr-sub">${showTeam ? `<b>${esc(m.teamObj.short)}</b> ` : ''}${m.home ? 'doma' : 'vonku'}, ${esc(m.cup ? m.comp : m.roundName || m.comp)}</span></span>
+  return `<li class="mrow" data-team="${m.team}" data-where="${m.home ? 'doma' : 'vonku'}"><${tag} class="vb${m.res ? ` vb--${m.res}` : ''}"${href}>
+  <span class="vb-d"><time datetime="${m.date}">${dShort(m.date)}</time><span>${dDay(m.date)}</span></span>
+  <span class="vb-o"><span class="vb-n">${esc(m.opponent)}</span><span class="vb-k">${showTeam ? `<b>${esc(m.teamObj.short)}</b> ` : ''}${m.home ? 'doma' : 'vonku'}, ${esc(m.cup ? m.comp : m.roundName || m.comp)}</span></span>
   ${right}
 </${tag}></li>`;
 }
