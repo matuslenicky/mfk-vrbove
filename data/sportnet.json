@@ -2,7 +2,7 @@
  "source": "Sportnet / Futbalnet",
  "appSpace": "mfk-vrbove.futbalnet.sk",
  "season": "2026/2027",
- "updated": "2026-11-16T12:28:03.247Z",
+ "updated": "2026-11-17T13:37:09.609Z",
  "teams": [
   {
    "slug": "a-muzstvo",
@@ -16535,13 +16535,13 @@
      "name": "TJ Spartak Horná Streda",
      "space": "tj-spartak-horna-streda.futbalnet.sk",
      "our": false,
-     "played": 9,
+     "played": 10,
      "won": 1,
-     "draw": 8,
+     "draw": 9,
      "lost": 0,
      "gf": 10,
      "ga": 2,
-     "pts": 11,
+     "pts": 12,
      "out": false
     },
     {
@@ -16574,6 +16574,20 @@
     },
     {
      "pos": 5,
+     "name": "TJ Družstevník Lubina - kopanice",
+     "space": "tj-druzstevnik-lubina-kopanice.futbalnet.sk",
+     "our": false,
+     "played": 9,
+     "won": 0,
+     "draw": 9,
+     "lost": 0,
+     "gf": 0,
+     "ga": 0,
+     "pts": 9,
+     "out": false
+    },
+    {
+     "pos": 6,
      "name": "OŠK Bošáca",
      "space": "osk-bosaca.futbalnet.sk",
      "our": false,
@@ -16587,21 +16601,21 @@
      "out": false
     },
     {
-     "pos": 6,
-     "name": "TJ Družstevník Lubina - kopanice",
-     "space": "tj-druzstevnik-lubina-kopanice.futbalnet.sk",
+     "pos": 7,
+     "name": "FK Bradlan Brezová pod Bradlom",
+     "space": "fk-bradlan-brezova-pod-bradlom.futbalnet.sk",
      "our": false,
-     "played": 8,
+     "played": 9,
      "won": 0,
      "draw": 8,
-     "lost": 0,
-     "gf": 0,
-     "ga": 0,
+     "lost": 1,
+     "gf": 3,
+     "ga": 4,
      "pts": 8,
      "out": false
     },
     {
-     "pos": 7,
+     "pos": 8,
      "name": "TJ Iskra Moravské Lieskové",
      "space": "tj-iskra-moravske-lieskove.futbalnet.sk",
      "our": false,
@@ -16615,7 +16629,7 @@
      "out": false
     },
     {
-     "pos": 8,
+     "pos": 9,
      "name": "MFK Vrbové B",
      "space": "mfk-vrbove.futbalnet.sk",
      "our": true,
@@ -16629,9 +16643,37 @@
      "out": false
     },
     {
-     "pos": 9,
+     "pos": 10,
+     "name": "OŠK Hôrka nad Váhom",
+     "space": "osk-horka-nad-vahom.futbalnet.sk",
+     "our": false,
+     "played": 8,
+     "won": 0,
+     "draw": 7,
+     "lost": 1,
+     "gf": 2,
+     "ga": 8,
+     "pts": 7,
+     "out": false
+    },
+    {
+     "pos": 11,
      "name": "MFK Stará Turá",
      "space": "mfk-stara-tura.futbalnet.sk",
+     "our": false,
+     "played": 7,
+     "won": 0,
+     "draw": 7,
+     "lost": 0,
+     "gf": 0,
+     "ga": 0,
+     "pts": 7,
+     "out": false
+    },
+    {
+     "pos": 12,
+     "name": "OŠK Slovan Beckov",
+     "space": "osk-slovan-beckov.futbalnet.sk",
      "our": false,
      "played": 6,
      "won": 0,
@@ -16640,48 +16682,6 @@
      "gf": 0,
      "ga": 0,
      "pts": 6,
-     "out": false
-    },
-    {
-     "pos": 10,
-     "name": "OŠK Hôrka nad Váhom",
-     "space": "osk-horka-nad-vahom.futbalnet.sk",
-     "our": false,
-     "played": 7,
-     "won": 0,
-     "draw": 6,
-     "lost": 1,
-     "gf": 2,
-     "ga": 8,
-     "pts": 6,
-     "out": false
-    },
-    {
-     "pos": 11,
-     "name": "OŠK Slovan Beckov",
-     "space": "osk-slovan-beckov.futbalnet.sk",
-     "our": false,
-     "played": 4,
-     "won": 0,
-     "draw": 4,
-     "lost": 0,
-     "gf": 0,
-     "ga": 0,
-     "pts": 4,
-     "out": false
-    },
-    {
-     "pos": 12,
-     "name": "FK Bradlan Brezová pod Bradlom",
-     "space": "fk-bradlan-brezova-pod-bradlom.futbalnet.sk",
-     "our": false,
-     "played": 5,
-     "won": 0,
-     "draw": 4,
-     "lost": 1,
-     "gf": 3,
-     "ga": 4,
-     "pts": 4,
      "out": false
     }
    ]
