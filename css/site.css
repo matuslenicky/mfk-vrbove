@@ -247,7 +247,7 @@ a.vb:hover .vb-n { text-decoration: underline; text-decoration-color: var(--yell
 .pl8-c { font: 900 1.2rem/1 var(--display); color: var(--yellow); }
 .pl8s--none { font: 500 .75rem/1.1 var(--text); color: rgba(255, 255, 255, .78); }
 .vb--l .pl8 { background: #e6e9f2; }
-@media (max-width: 379.98px) { .pl8 { width: 20px; height: 28px; font-size: 1.1rem; } .vb { gap: 8px; } }
+@media (max-width: 379.98px) { .pl8 { width: 20px; height: 28px; font-size: 1.1rem; } .vb { gap: 8px; padding: 8px 8px 8px 10px; } .vb-n { font-size: .9375rem; } }
 .logo--txt { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--mist); color: var(--night); font: 800 .8rem/1 var(--display); }
 .res-bg--w { background: var(--win); color: #fff; }
 .res-bg--d { background: var(--draw); color: #fff; }
