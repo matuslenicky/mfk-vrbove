@@ -2,7 +2,7 @@
  "source": "Sportnet / Futbalnet",
  "appSpace": "mfk-vrbove.futbalnet.sk",
  "season": "2026/2027",
- "updated": "2026-11-17T13:37:09.609Z",
+ "updated": "2026-11-17T15:30:46.634Z",
  "teams": [
   {
    "slug": "a-muzstvo",
@@ -2502,7 +2502,7 @@
      "min": "86",
      "player": "Marek Pavol Dunajčík",
      "side": "our",
-     "kind": "goal"
+     "kind": "own"
     },
     {
      "min": "89",
@@ -4515,7 +4515,7 @@
      "min": "15",
      "player": "Matej Mareništiak",
      "side": "opp",
-     "kind": "goal"
+     "kind": "own"
     },
     {
      "min": "18",
@@ -6723,13 +6723,13 @@
      "min": "11",
      "player": "Rastislav Polakovič",
      "side": "opp",
-     "kind": "goal"
+     "kind": "own"
     },
     {
      "min": "17",
      "player": "Jaroslav Kovačovic",
      "side": "opp",
-     "kind": "goal"
+     "kind": "own"
     },
     {
      "min": "19",
@@ -9158,7 +9158,7 @@
      "min": "15",
      "player": "Diego Augusto Aléssio Gonçalves",
      "side": "opp",
-     "kind": "goal"
+     "kind": "own"
     },
     {
      "min": "71",
@@ -9699,7 +9699,7 @@
      "min": "31",
      "player": "Matúš Kunic",
      "side": "our",
-     "kind": "goal"
+     "kind": "own"
     },
     {
      "min": "34",
