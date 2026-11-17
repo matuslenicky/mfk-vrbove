@@ -230,26 +230,28 @@ abbr[title] { text-decoration: none; }
 }
 
 /* ---- zoznam zápasov ---- */
-.mlist { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--night); }
-.mrow { border-bottom: 1px solid var(--line); }
-.mrow-in { display: grid; grid-template-columns: 52px 32px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 11px 2px; color: var(--ink); text-decoration: none; min-height: 60px; }
-a.mrow-in:hover { background: var(--mist); }
-a.mrow-in:hover .mr-opp { text-decoration: underline; }
-.mr-date { display: flex; flex-direction: column; line-height: 1.15; font-size: .9375rem; white-space: nowrap; }
-.mr-day { font-size: .75rem; color: var(--muted); text-transform: lowercase; }
-.mrow .logo { width: 32px; height: 32px; object-fit: contain; }
+.mlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+/* riadok ako malá dedinská tabuľa: nočná modrá, súper bielym, skóre a čas na plechových tabuľkách */
+.vb { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 62px; padding: 8px 10px 8px 12px; border-radius: 4px; background: var(--night); color: #fff; text-decoration: none; box-shadow: inset 0 -3px 0 #071337; }
+a.vb:hover { background: var(--blue-d); }
+a.vb:hover .vb-n { text-decoration: underline; text-decoration-color: var(--yellow); }
+.vb-d { display: flex; flex-direction: column; font: 800 1.05rem/1.1 var(--display); color: var(--yellow); }
+.vb-d span { font: 600 .75rem/1.3 var(--text); text-transform: lowercase; color: rgba(255, 255, 255, .8); }
+.vb-o { display: flex; flex-direction: column; min-width: 0; }
+.vb-n { font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; }
+.vb-k { font-size: .8125rem; color: rgba(255, 255, 255, .78); }
+.vb-k b { color: var(--yellow); }
+.pl8s { display: inline-flex; align-items: center; gap: 3px; white-space: nowrap; }
+.pl8 { display: inline-grid; place-items: center; width: 24px; height: 32px; border-radius: 2px; background: #fff; color: var(--night); font: 900 1.3rem/1 var(--display); box-shadow: 0 2px 0 #050d26; }
+.pl8--y { background: var(--yellow); }
+.pl8-c { font: 900 1.2rem/1 var(--display); color: var(--yellow); }
+.pl8s--none { font: 500 .75rem/1.1 var(--text); color: rgba(255, 255, 255, .78); }
+.vb--l .pl8 { background: #e6e9f2; }
+@media (max-width: 379.98px) { .pl8 { width: 20px; height: 28px; font-size: 1.1rem; } .vb { gap: 8px; } }
 .logo--txt { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--mist); color: var(--night); font: 800 .8rem/1 var(--display); }
-.mr-main { display: flex; flex-direction: column; min-width: 0; }
-.mr-opp { font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; }
-.mr-at { color: var(--muted); font-weight: 500; }
-.mr-sub { font-size: .8125rem; color: var(--muted); line-height: 1.3; }
-.mr-sub b { color: var(--night); }
-.mr-score, .mr-time { min-width: 54px; padding: 6px 8px 5px; border-radius: 3px; text-align: center; font: 800 1.25rem/1 var(--display); font-variant-numeric: tabular-nums; }
 .res-bg--w { background: var(--win); color: #fff; }
 .res-bg--d { background: var(--draw); color: #fff; }
 .res-bg--l { background: var(--loss); color: #fff; }
-.mr-score--none { font: 500 .75rem/1.1 var(--text); color: var(--muted); background: var(--mist); }
-.mr-time { box-shadow: inset 0 0 0 2px var(--night); color: var(--night); }
 .month + .month { margin-top: 26px; }
 .month-h { font: 700 .9375rem/1.2 var(--text); color: var(--muted); margin-bottom: 8px; text-transform: capitalize; }
 .cols2--list .h2 { margin-bottom: 18px; }
